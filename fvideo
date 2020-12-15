@@ -1,0 +1,30 @@
+#!/bin/sh
+
+if [ $1 = encode ]
+then
+  python ./script/encode.py $2 $3 $4 $5
+
+elif [ $1 = encode2 ]
+then
+  python ./script/encode2.py $2 $3 $4 $5
+
+elif [ $1 = package ]
+then
+  python ./script/package.py $2 $3 $4 # 動画ファイルのパス メールアドレス メールアドレス
+
+elif [ $1 = package2 ]
+then
+  python ./script/package2.py $2 $3 $4 # 動画ファイルのパス メールアドレス メールアドレス
+
+elif [ $1 = publish ]
+then
+  python ./script/publish.py $2 $3
+
+elif [ $1 = check ]
+then
+  python ./script/check.py $2 $3
+
+else
+  echo 'incorrect arguments'
+fi
+
